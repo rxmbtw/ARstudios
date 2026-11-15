@@ -51,9 +51,13 @@
   .btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px -10px var(--a)}
   .duo{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:54px}
   .who{border:1px solid var(--line);border-radius:var(--r);padding:20px;background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.01))}
-  .who .av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#000;margin-bottom:10px}
-  .who b{display:block;font-size:18px}
-  .who span{color:var(--mute);font-size:14px}
+  .who{display:flex;gap:16px;align-items:center}
+  .who img{width:96px;height:96px;flex:0 0 auto;border-radius:50%;object-fit:cover;border:3px solid var(--c1,var(--b))}
+  .who b{display:block;font-size:19px;line-height:1.2}
+  .who .role{display:block;color:var(--mute);font-size:14px;margin:2px 0 8px}
+  .who .q{display:flex;flex-wrap:wrap;gap:6px}
+  .who .q i{font-style:normal;font-size:12px;border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:var(--ink);background:rgba(255,255,255,.04)}
+  @media(max-width:420px){.who{flex-direction:column;text-align:center}.who .q{justify-content:center}}
 
   /* marquee */
   .marq{border-block:1px solid var(--line);overflow:hidden;padding:16px 0;background:rgba(255,255,255,.02)}
@@ -154,8 +158,10 @@
     <a class="btn" href="#plan">Our plan for Lalit Tutorials</a>
   </div>
   <div class="duo">
-    <div class="who"><div class="av" style="background:var(--b)">S</div><b>Shriram Surse</b><span>Content creator · shoots, edits, writes, posts</span></div>
-    <div class="who"><div class="av" style="background:var(--a)">A</div><b>Arhant Shende</b><span>Content creator · shoots, edits, writes, posts</span></div>
+    <div class="who" style="--c1:var(--b)"><img src="media/team/shriram.jpg" alt="Shriram Surse"><div><b>Shriram Surse</b><span class="role">Content creator · shoots, edits, writes, posts</span>
+      <div class="q"><i>Cloud Engineer</i><i>Web Developer</i><i>Content Creator</i><i>Editor</i><i>Writer</i><i>Event Management</i></div></div></div>
+    <div class="who" style="--c1:var(--a)"><img src="media/team/arhant.jpg" alt="Arhant Shende"><div><b>Arhant Shende</b><span class="role">Content creator · shoots, edits, writes, posts</span>
+      <div class="q"><i>BSc Forensic Science</i><i>Videography</i><i>Photography</i><i>Director</i><i>Storytelling &amp; Scripting</i><i>Video Editing &amp; Colour Grading</i></div></div></div>
   </div>
 </header>
 
